@@ -1,0 +1,71 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             FUNCTION, CODE, READONLY
+    2 00000000                 EXPORT           sum
+    3 00000000         sum     PROC
+    4 00000000 4602            MOV              r2, r0
+    5 00000002 460B            MOV              r3, r1
+    6 00000004 EA80 0000       EOR              r0, r0
+    7 00000008 EA81 0101       EOR              r1, r1
+    8 0000000C         loop_sign
+    9 0000000C 6814            LDR              r4, [r2]
+   10 0000000E 1900            ADDS             r0, r4
+   11 00000010 D700            BVC              pass_ovf
+   12 00000012 1C49            ADDS             R1, R1, #1
+   13 00000014         pass_ovf
+   14 00000014 F102 0204       ADD              r2, #4
+   15 00000018 F1A3 0301       SUB              r3, #1
+   16 0000001C 2B00            CMP              r3, #0
+   17 0000001E D1F5            BNE              loop_sign
+   18 00000020 4770            BX               lr
+   19 00000022                 ENDP
+   20 00000022                 END
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp.sp --apcs=
+interwork --depend=.\sum.d -o.\sum.o -IC:\Users\aleks\AppData\Local\Arm\Packs\K
+eil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include -IC:\Keil_v5
+\ARM\CMSIS\Include --predefine="__EVAL SETA 1" --predefine="__UVISION_VERSION S
+ETA 533" --predefine="STM32F407xx SETA 1" --list=.\sum.lst sum.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+FUNCTION 00000000
+
+Symbol: FUNCTION
+   Definitions
+      At line 1 in file sum.s
+   Uses
+      None
+Comment: FUNCTION unused
+loop_sign 0000000C
+
+Symbol: loop_sign
+   Definitions
+      At line 8 in file sum.s
+   Uses
+      At line 17 in file sum.s
+Comment: loop_sign used once
+pass_ovf 00000014
+
+Symbol: pass_ovf
+   Definitions
+      At line 13 in file sum.s
+   Uses
+      At line 11 in file sum.s
+Comment: pass_ovf used once
+sum 00000000
+
+Symbol: sum
+   Definitions
+      At line 3 in file sum.s
+   Uses
+      At line 2 in file sum.s
+Comment: sum used once
+4 symbols
+338 symbols in table

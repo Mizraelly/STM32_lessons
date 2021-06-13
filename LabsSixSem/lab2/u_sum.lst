@@ -1,0 +1,71 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             FUNCTION, CODE, READONLY
+    2 00000000                 EXPORT           u_sum
+    3 00000000         
+    4 00000000         u_sum   PROC
+    5 00000000         
+    6 00000000 B570            push             {LR, r4, r5 , r6}
+    7 00000002         
+    8 00000002 F04F 0400       mov              r4, #0
+    9 00000006 F04F 0500       mov              r5, #0
+   10 0000000A F04F 0600       mov              r6, #0
+   11 0000000E         
+   12 0000000E         loop
+   13 0000000E 6803            LDR              r3, [r0]
+   14 00000010 18E4            ADDS             r4, r4, r3
+   15 00000012 F145 0500       ADC              r5, #0
+   16 00000016 F100 0004       ADD              r0, r0, #4
+   17 0000001A F106 0601       ADD              r6, r6, #1
+   18 0000001E 428E            CMP              r6, r1
+   19 00000020 D1F5            BNE              loop
+   20 00000022         
+   21 00000022 4620            mov              r0, r4
+   22 00000024 4629            mov              r1, r5
+   23 00000026         
+   24 00000026 BD70            pop              {PC, r4, r5 , r6}
+   25 00000028         
+   26 00000028                 ENDP
+   27 00000028         
+   28 00000028                 END
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp.sp --apcs=
+interwork --depend=.\u_sum.d -o.\u_sum.o -IC:\Users\aleks\AppData\Local\Arm\Pac
+ks\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include -IC:\Kei
+l_v5\ARM\CMSIS\Include --predefine="__EVAL SETA 1" --predefine="__UVISION_VERSI
+ON SETA 533" --predefine="STM32F407xx SETA 1" --list=.\u_sum.lst Source\u_sum.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+FUNCTION 00000000
+
+Symbol: FUNCTION
+   Definitions
+      At line 1 in file Source\u_sum.s
+   Uses
+      None
+Comment: FUNCTION unused
+loop 0000000E
+
+Symbol: loop
+   Definitions
+      At line 12 in file Source\u_sum.s
+   Uses
+      At line 19 in file Source\u_sum.s
+Comment: loop used once
+u_sum 00000000
+
+Symbol: u_sum
+   Definitions
+      At line 4 in file Source\u_sum.s
+   Uses
+      At line 2 in file Source\u_sum.s
+Comment: u_sum used once
+3 symbols
+337 symbols in table

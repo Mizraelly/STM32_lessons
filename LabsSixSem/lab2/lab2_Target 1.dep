@@ -1,0 +1,12 @@
+Dependencies for Project 'lab2', Target 'Target 1': (DO NOT MODIFY !)
+CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
+F (.\Source\define.h)(0x605A1C85)()
+F (.\Source\main.c)(0x60620F6B)(-c --cpu Cortex-M4.fp.sp -D__EVAL -g -O0 --apcs=interwork --split_sections-IC:\Users\aleks\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DSTM32F407xx-o .\main.o --omf_browse .\main.crf --depend .\main.d)
+I (Source\define.h)(0x605A1C85)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E8312)
+F (.\Source\startup.s)(0x6059F2BB)(--cpu Cortex-M4.fp.sp --pd "__EVAL SETA 1" -g --apcs=interwork -IC:\Users\aleks\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 533" --pd "STM32F407xx SETA 1"--list .\startup.lst --xref -o .\startup.o --depend .\startup.d)
+F (.\Source\strcpy.c)(0x6059F2BB)(-c --cpu Cortex-M4.fp.sp -D__EVAL -g -O0 --apcs=interwork --split_sections-IC:\Users\aleks\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="533" -DSTM32F407xx-o .\strcpy.o --omf_browse .\strcpy.crf --depend .\strcpy.d)
+I (Source\define.h)(0x605A1C85)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E8312)
+F (.\Source\u_sum.s)(0x60620B1E)(--cpu Cortex-M4.fp.sp --pd "__EVAL SETA 1" -g --apcs=interwork -IC:\Users\aleks\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 533" --pd "STM32F407xx SETA 1"--list .\u_sum.lst --xref -o .\u_sum.o --depend .\u_sum.d)
+F (.\sum.s)(0x605B296F)(--cpu Cortex-M4.fp.sp --pd "__EVAL SETA 1" -g --apcs=interwork -IC:\Users\aleks\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 533" --pd "STM32F407xx SETA 1"--list .\sum.lst --xref -o .\sum.o --depend .\sum.d)
